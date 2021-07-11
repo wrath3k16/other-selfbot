@@ -3,7 +3,7 @@
 Run the Installer.bat to install the dependancies
 if you get any errors refer to manual installation.
 
-once youve installed all the dependancies you may run the turner 
+once youve installed all the dependancies you may run the turner onner
 -----------------------------------------------------------------------------------------------------
 
 ## Manual Installation
