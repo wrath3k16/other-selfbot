@@ -5,7 +5,7 @@ if you get any errors refer to manual installation.
 
 once youve installed all the dependancies you may run the turner onner
 -----------------------------------------------------------------------------------------------------
-
+asdgjp;lokijuhygtfr
 ## Manual Installation
 
 CD into the folder path and enter "python failsafe.py" into cmd
