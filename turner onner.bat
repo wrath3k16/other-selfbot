@@ -1,6 +1,7 @@
 @echo off
 cls
 title Failsafe Launcher
+git init
 git fetch --all
 git reset --hard
 git reset --hard HEAD
