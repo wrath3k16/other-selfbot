@@ -39,7 +39,7 @@ prefix = config.get('prefix')
 
 nitro_sniper = config.get('nitro_sniper')
 
-stream_url = "https://www.twitch.tv/souljaboy"
+stream_url = ""
 tts_language = "en"
 
 start_time = datetime.datetime.utcnow()
@@ -397,7 +397,7 @@ async def on_member_ban(guild: discord.Guild, user: discord.user):
                     print("not banned - " + i.user.name)
                 else:
                     print("banned - " + i.user.name)
-                    await guild.ban(i.user, reason="Exeter Anti-Nuke")
+                    await guild.ban(i.user, reason="Failsafe Anti-Nuke")
         except Exception as e:
             print(e)
 
@@ -412,8 +412,8 @@ async def on_member_join(member):
                     member.guild.id].keys():
                     return
                 else:
-                    await guild.ban(member, reason="Exeter Anti-Nuke")
-                    await guild.ban(i.user, reason="Exeter Anti-Nuke")
+                    await guild.ban(member, reason="Failsafe Anti-Nuke")
+                    await guild.ban(i.user, reason="Failsafe Anti-Nuke")
         except Exception as e:
             print(e)
 
@@ -429,7 +429,7 @@ async def on_member_remove(member):
                     print('not banned')
                 else:
                     print('banned')
-                    await guild.ban(i.user, reason="Exeter Anti-Nuke")
+                    await guild.ban(i.user, reason="Failsafe Anti-Nuke")
         except Exception as e:
             print(e)
 
@@ -885,12 +885,12 @@ async def help(ctx, category=None):
         await ctx.send(embed=embed)
     elif str(category).lower() == "misc":
         embed = discord.Embed(color=random.randrange(0x1000000), timestamp=ctx.message.created_at)
-        embed.set_image(url="https://cdn.discordapp.com/attachments/852378597623857185/858079513685917726/MOSHED-2021-5-22-22-18-39.gif")
+        embed.set_image(url="https://cdn.discordapp.com/attachments/818039398900695055/874112290046247002/output-onlinegiftools.gif")
         embed.description = f"\uD83D\uDCB0 `MISCELLANEOUS COMMANDS`\n`> copycat <user>` - copies the users messages ({Exeter.copycat})\n`> stopcopycat` - stops copycatting\n`> fakename` - makes a fakename with other members's names\n`> geoip <ip>` - looks up the ip's location\n`> pingweb <website-url>` pings a website to see if it's up\n`> anticatfish <user>` - reverse google searches the user's pfp\n`> stealemoji` - <emoji> <name> - steals the specified emoji\n`> hexcolor <hex-code>` - returns the color of the hex-code\n`> dick <user>` - returns the user's dick size\n`> bitcoin` - shows the current bitcoin exchange rate\n`> hastebin <message>` - posts your message to hastebin\n`> rolecolor <role>` - returns the role's color\n`> nitro` - generates a random nitro code\n`> feed <user>` - feeds the user\n`> tickle <user>` - tickles the user\n`> slap <user>` - slaps the user\n`> hug <user>` - hugs the user\n`> cuddle <user>` - cuddles the user\n`> smug <user>` - smugs at the user\n`> pat <user>` - pat the user\n`> kiss <user>` - kiss the user\n`> topic` - sends a conversation starter\n`> wyr` - sends a would you rather\n`> gif <query>` - sends a gif based on the query\n`> sendall <message>` - sends a message in every channel\n`> poll <msg: xyz 1: xyz 2: xyz>` - creates a poll\n`> bots` - shows all bots in the server\n`> image <query>` - returns an image\n`> hack <user>` - hacks the user\n`> token <user>` - returns the user's token\n`> cat` - returns random cat pic\n`> sadcat` - returns a random sad cat\n`> dog` - returns random dog pic\n`> fox` - returns random fox pic\n`> bird` - returns random bird pic\n"
         await ctx.send(embed=embed)
     elif str(category).lower() == "antinuke":
         embed = discord.Embed(color=random.randrange(0x1000000), timestamp=ctx.message.created_at)
-        embed.set_image(url="https://cdn.discordapp.com/attachments/852378597623857185/858079917114392606/tenor_20-3-1-1-1.gif")
+        embed.set_image(url="https://media.discordapp.net/attachments/818039398900695055/874112809846333490/MOSHED-2021-7-2-5-24-23.gif")
         embed.description = f"\uD83D\uDCB0 `ANTI-NUKE COMMANDS`\n`> antiraid <on/off>` - toggles anti-nuke ({Exeter.antiraid})\n`> whitelist <user>` - whitelists the specified user\n**NOTE** Whitelisting a user will completely exclude them from anti-nuke detections, be weary on who you whitelist.\n`> whitelisted <-g>` - see who's whitleisted and in what guild\n`> unwhitelist <user>` - unwhitelists the user\n`> clearwhitelist` - clears the whitelist hash"
         await ctx.send(embed=embed)
     elif str(category).lower() == "nuke":
@@ -1122,7 +1122,7 @@ async def sendall(ctx, *, message):
 async def spamgcname(ctx):
     await ctx.message.delete()
     if isinstance(ctx.message.channel, discord.GroupChannel):
-        watermark = "Exeter LOL"
+        watermark = "Failsafe #1"
         name = ""
         for letter in watermark:
             name = name + letter
